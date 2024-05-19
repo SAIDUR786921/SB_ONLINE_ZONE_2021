@@ -1,0 +1,467 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">);
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins", sans-serif;
+    
+}
+body{
+  height: auto;
+  width:auto;
+}
+/*class{
+    width: 150px;
+    height: 100px;
+    position: relative;
+    display: block;
+    background: #660c0c;
+    border-radius: 200px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5), inset 0px -5px 15px rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+}*/
+
+class::after{
+    content: ;
+    width: 180px;
+    height: 180px;
+    position: absolute;
+    top: 10px;
+    left:10px
+    background : linear-gradient(#ffcc89, #d8860b);
+    border-radius: 180px;
+    box-sizing: 0px 5px 10px;
+
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background: url(SID.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: relative;
+    top: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    color: red;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+}
+
+header .navigation a{
+    color: rgb(255, 255, 255);
+    background: #010b01;
+
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+    
+}
+
+header .navigation a : :not(:last-child){
+    margin: right 30px;
+}
+
+header .navigation a :hover {
+   background: blue;
+}
+
+.content{
+    max-width: auto ;
+    margin: 50px 150px;
+
+}
+.content .info p{
+    color: #de1f42;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 100
+    margin-bottom : 3px;
+
+}
+
+.content .info h3{
+    color: rgb(255, 0, 25);
+    font-size: 60PX;
+    font-weight: 700;
+}
+
+
+.content .info-btn{
+    color: rgb(5, 250, 22);
+    /*background: #b007f9;*/
+
+    text-decoration:1px ;
+    text-transform: uppercase;
+    font-weight: 1000;
+    letter-spacing: 3px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.5s;
+    transition-property: background;
+}
+
+.content .info-btn:hover{
+    background: #4545c5 ;
+}
+
+.media-icons{
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.media-icons a{
+    position: relative;
+    color: rgb(9, 58, 253);
+    font-size: 30px;
+    transition: 0.3s;
+    transition-property : transform;
+
+}
+
+
+.media-icons a:not(:last-child){
+    margin-right: 60px;
+}
+.media-icons a:hover{
+    /*transform: scale(1.5);*/
+    transform: scale(1.5);
+
+}
+
+label{
+    display: none;
+
+}
+
+#check{
+    z-index: 3;
+    display: none;
+
+}
+
+/* responsive styles */
+/*@media (max-width: 60px)*/
+@media (max-width: 60px){
+    header .navigation{
+        display: none;
+    }
+    label{
+        display: block;
+        font-size: 26px;
+        cursor: pointer;
+        transition: 0.5s;
+        transition-property: color;
+    }
+
+    lable:hover{
+        color:rgb(0, 255, 200) ;
+    }
+
+    label .close-btn{
+        display: none;
+    }
+
+    #check:checked ~ header .navigation {
+        z-index: 2;
+        position: fixed;
+        background: rgba(114, 223, 255, 0.9);
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #check:checked ~ header .navigation a{
+        font-weight: 700;
+        margin-right: 0;
+        margin-bottom: 50px;
+        letter-spacing: 2px;
+    }
+
+    #check:checked ~ header label .menu-btn{
+        display: none;
+    }
+    #check:checked ~ header label .close-btn{
+        z-index: 2;
+        display: block;
+        position: fixed;
+    }
+    label .menu-btn {
+        position: absolute;
+
+    }
+
+    header .logo{
+        position: absolute;
+        bottom: -6px;
+
+    }
+    .content.info h3 {
+        font-size: 45px;
+        line-height: 45px;
+    }
+    .content .info h3 span{
+        font-size: 40px;
+        font-weight: 600;
+    }
+    .content .info P {
+        font-size: 14px;
+
+    }
+}
+
+@media (max-width: 560px){
+    .content .info h2{
+    font-size: 40px;
+    font-weight: 50px;
+    }
+    .content .info h2 span {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .content .info p{
+        font-size: 14px;
+
+    }
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+img{
+    float: left;
+margin-right: 20px;
+}
+p{
+ font-size: 3vh ;
+}
+
+h5{
+    font-size: 3.2vh;
+    font: white;
+    font-size: 15px;
+                background: -webkit-linear-gradient(52deg, rgb(29, 250, 4),rgb(241, 131, 131)) ;
+                
+}
+
+
+.parent {
+    position: absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: #234ce0;
+    display: flex;
+    color: white;
+    padding: 0 150px;
+  }
+  
+  .left,
+  .center,
+  .right {
+    width: 33.33%;
+    height: 100%;
+  }
+  
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .left h3 {
+    font-size: 25px;
+  }
+  
+  .center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding-left: 180px;
+  }
+  
+  .center p {
+    font-size: 17px;
+  }
+  
+  .right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+  }
+  
+  .right i {
+    font-size: 25px;
+  }
+  
+  span {
+    font-size: 50px;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust top position as needed */
+    /*left: 100px; /* Adjust left position as needed */
+    right: 10px;
+    background-color: #121010;
+    padding: 2px;
+    border: 3px solid #56dd0e;
+    border-radius: 10px;
+    font-size: 30PX;
+  }
+  a{
+    color: rgb(0, 255, 255);
+    opacity: 0.5;
+  
+    
+  }
+  a:hover {
+    opacity: 1.0;
+  }
+  a:link {
+    color: #ef0303;
+  }
+  
+  
+  a:visited {
+    color: #0bdaf6;
+  }
+  
+  a:hover {
+    color: #91f505;
+  }
+  a:active {
+    color: #0000FF;
+  }
+  
+  
+  .menu {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .menu {
+    margin-bottom: 20px;
+  }
+  
+  .menu {
+    text-decoration: none;
+    color: #ff0404;
+  }
+  
+  .close-button {
+   /* position: absolute;*/
+    top: -25px;
+    /*right: 20px;*/
+    cursor: pointer;
+    left: auto;
+    font-size: 40px;
+    
+  
+  }
+  h1{
+    color: #ff002b;
+    
+  }
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+h2{
+    font-size: 5.4vw;
+                text-shadow: 2px 5px;
+                animation: move-rtl 0.01ms linear infinite;
+                font-size-adjust: inherit;
+                font-size-adjust: initial;
+                background: -webkit-linear-gradient(52deg, rgb(29, 250, 4),rgb(248, 1, 1), rgb(15, 15, 38)) ;
+                -webkit-text-fill-color:transparent ;
+                -webkit-background-clip:text ;
+
+            }
+            @keyframes move-rtl {
+                0%{
+                    transform: translateX(0.2);
+                }
+                100%{
+                    transform: translateX(-0.1%);
+                    
+                }
+            }         
+a{
+    
+}

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="p-loan.css">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    </head>
+
+</head>
+    <title>Parsonal loan</title>
+
+    <section>
+
+      <header>  
+          <h1> <p href="#" class="logo"><img src="LOGO.jpg" width="200vh" height="150vh"></p></h1>
+ 
+
+
+<button onclick="toggleMenu()" class="menu-icon"><i class="fas fa-bars"></i></button> <!-- Font Awesome icon -->
+
+<div class="menu" id="menu">
+<span class="close-button" onclick="toggleMenu()">X</span>
+
+<a href="p-loan.html">Personal Loan</a>
+<a href="B-L.html">Business Loan </a>
+<a href="FIXD.HTML">Fix Deposit</a>
+<!--a href="loginpage.html">Login</a>
+<a href="registar.html">Register</a>
+<a href="SETY.html">Service</a-->   
+</div>
+    
+
+</div>
+
+<script>
+function toggleMenu() {
+var menu = document.getElementById('menu');
+var menuIcons = document.querySelector('.menu-icon');
+if (menu.style.display === 'none' || menu.style.display === '') {
+menu.style.display = 'block';
+menuIcons.style.display = 'none'
+} else {
+menu.style.display = 'none';
+menuIcons.style.display = 'block'
+}
+}
+</script>
+</header>
+
+</head>
+<body>
+    <div class="container">
+        <h1>SB Online Zone Business Loan </h1>
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+            <h2>"Secure your business's growth with a competitive business loan at a 21% interest rate." </h2>       
+          </marquee>
+
+        <form id="fixedDepositForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="name">Customer Name <span class="required">*</span>:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="fatherName">Father's Name <span class="required">*</span>:</label>
+                <input type="text" id="fatherName" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address <span class="required">*</span>:</label>
+                <textarea id="address" rows="4" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Mobile No <span class="required">*</span>:</label>
+                <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth <span class="required">*</span>:</label>
+                <input type="date" id="dob" required>
+            </div>
+            <br>
+            <br>
+            <div class="SAI">
+            <h1> <p href="#" class="logo"><img src="B-L-C.jpg" width="600vh" height="300vh"></p></h1>
+            </div>
+
+
+            <div class="input-group">
+                <h1>Ditels of the Nominee</h1>
+                <label for="nominee">Nominee <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+                <label for="dob">Nominee Date of Birth <span class="required">*</span>:</label>
+                <input type="date" id="dob" required>
+                <label for="nominee">Nominee Father Name <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+                <label for="nominee">Nominee Address <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+
+
+
+            </div>
+            <br>
+            <br>
+
+            
+
+
+            <h2>Loan EMI Calculator</h2>
+<form id="loanForm">
+  Loan Amount (in Rupees): <input type="number" id="loanAmount" required><br><br>
+  Loan Term (in months): <input type="number" id="loanTerm" required><br><br>
+  <button type="button" onclick="calculateEMI()">Calculate EMI</button><br><br>
+  Monthly EMI: <span id="monthlyEMI"></span><br>
+  Total EMI: <span id="totalEMI"></span><br><br>
+</form>
+
+<script>
+function calculateEMI() {
+  var loanAmount = document.getElementById("loanAmount").value;
+  var loanTerm = document.getElementById("loanTerm").value;
+  var interestRate = 21; // Annual interest rate in percentage
+  var monthlyInterestRate = interestRate / (12 * 100);
+  var monthlyEMI = (loanAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -loanTerm));
+  var totalEMI = monthlyEMI * loanTerm;
+
+  document.getElementById("monthlyEMI").textContent = monthlyEMI.toFixed(2) + " Rupees";
+  document.getElementById("totalEMI").textContent = totalEMI.toFixed(2) + " Rupees";
+}
+</script>
+
+    <br>
+    <br>
+    
+    <!--button id="submitBtn">Submit</button>
+
+<script>
+document.getElementById("submitBtn").addEventListener("click", function() {
+    // Check if the button has already been clicked
+    if (!localStorage.getItem("buttonClicked")) {
+        // Change body color
+        document.body.style.backgroundColor = getRandomColor();
+        // Save to local storage
+        localStorage.setItem("buttonClicked", true);
+    } else {
+        alert("You've already clicked the button!");
+    }
+});
+
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+}
+
+
+</script-->
+<div class="janu">
+    <h2>Upload Loan Doc</h2>
+    <br>
+    <form id="loanForm">
+        <div>     
+       <input type="file" id="document" accept=".doc,.docx,.pdf"><o>Upload business Ditels</o>
+    </div>
+    <br>
+    <div>       
+       <input type="file" id="photo" accept="image/*"><o>Upload photo</o>
+    </div>
+    <br>
+    <div>  
+       <input type="file" id="signature" accept="image/*"><o>Upload signature</o>
+    </div>
+    <br>
+    <br>
+        <button type="button" onclick="submitLoan()">Submit</button>
+    </form>
+</div>
+
+<script>
+    function submitLoan() {
+        // Assuming validation and file upload logic here
+
+        // Simulating backend processing
+        setTimeout(function() {
+            // Generate random application number
+            var applicationNo = generateApplicationNumber();
+
+            // Show popup with application number
+            alert("Your Business Loan application has been submitted successfully. Your Business Loan Application Number: SBOZ/2024-25/B-L/" + applicationNo);
+
+            // Print PDF (simulate for demo)
+            printPDF(applicationNo);
+                    console.log("Printing PDF for Application Number: " + applicationNo);
+
+        }, 2000); // Simulate backend processing delay
+    }
+
+    function generateApplicationNumber() {
+        return Math.floor(Math.random() * 1000000); // Generate a random 6-digit number
+    }
+
+    function printPDF(applicationNo) {
+        // Simulate printing PDF for demo
+        console.log("Printing PDF for Application Number: " + applicationNo);
+        // You can integrate a PDF generation library here for actual PDF generation
+    }
+</script>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
+        <div class="parent">
+            <div class="left">
+              <h5>SBONLINEZONE.IN</h5>
+              <span>/</span>
+              <p>© 2024 SAIDUR | All right reserved</p>
+            </div>
+            <div class="center">
+              <p>Home</p>
+              <span>/</span>
+              <p>Blog</p>
+              <span>/</span>
+              <p>Project</p>
+            </div>
+            <div class="right">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            
+            
+</body>
+</html>

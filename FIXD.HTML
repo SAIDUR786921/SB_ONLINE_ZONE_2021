@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="FIX1.CSS">
+    <script src="https://kit.fontawesome.com/97ebdf5864.js" crossorigin="anonymous"></script>
+    </head>
+
+</head>
+    <title>SB ONLINE ZONE Fixed Deposit Application</title>
+
+    <section>
+
+      <header>  
+          <h1> <p href="#" class="logo"><img src="LOGO.jpg" width="200vh" height="150vh"></p></h1>
+ 
+
+
+<button onclick="toggleMenu()" class="menu-icon"><i class="fas fa-bars"></i></button> <!-- Font Awesome icon -->
+
+<div class="menu" id="menu">
+<span class="close-button" onclick="toggleMenu()">X</span>
+
+
+
+<a href="p-loan.html">Personal Loan</a>
+<a href="B-L.html">Business Loan </a>
+<a href="FIXD.HTML">Fix Deposit</a>
+<!--a href="loginpage.html">Login</a>
+<a href="registar.html">Register</a>
+<a href="SETY.html">Service</a-->   
+</div>
+    
+
+</div>
+
+<script>
+function toggleMenu() {
+var menu = document.getElementById('menu');
+var menuIcons = document.querySelector('.menu-icon');
+if (menu.style.display === 'none' || menu.style.display === '') {
+menu.style.display = 'block';
+menuIcons.style.display = 'none'
+} else {
+menu.style.display = 'none';
+menuIcons.style.display = 'block'
+}
+}
+</script>
+</header>
+
+</head>
+<body>
+    <div class="container">
+        <h1>SB Online Zone Fixed Deposit Application</h1>
+        <form id="fixedDepositForm" onsubmit="return validateForm()">
+            <div class="input-group">
+                <label for="name">Customer Name <span class="required">*</span>:</label>
+                <input type="text" id="name" required>
+            </div>
+            <div class="input-group">
+                <label for="fatherName">Father's Name <span class="required">*</span>:</label>
+                <input type="text" id="fatherName" required>
+            </div>
+            <div class="input-group">
+                <label for="address">Address <span class="required">*</span>:</label>
+                <textarea id="address" rows="4" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="mobile">Mobile No <span class="required">*</span>:</label>
+                <input type="tel" id="mobile" pattern="[0-9]{10}" required>
+            </div>
+            <div class="input-group">
+                <label for="dob">Date of Birth <span class="required">*</span>:</label>
+                <input type="date" id="dob" required>
+            </div>
+            <br>
+            <br>
+            
+        
+
+            <div class="input-group">
+                <h1>Ditels of the Nominee</h1>
+                <label for="nominee">Nominee <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+                <label for="dob">Nominee Date of Birth <span class="required">*</span>:</label>
+                <input type="date" id="dob" required>
+                <label for="nominee">Nominee Father Name <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+                <label for="nominee">Nominee Address <span class="required">*</span>:</label>
+                <input type="text" id="nominee" required>
+
+
+
+            </div>
+            <br>
+            <br>
+
+            
+            <div class="container">
+                <h1>Fixed Deposit Calculator</h1>
+                <div class="input-group">
+                    <label for="principal">Principal Amount (₹):</label>
+                    <input type="number" id="principal" min="0" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="rate">Annual Interest Rate (%):<BR> fillup Only 5%</label>
+                    <input type="number" id="rate" min="0" step="0.01">
+                </div>
+                <div class="input-group">
+                    <label for="time">Time Duration (years):</label>
+                    <input type="number" id="time" min="0" step="1">
+                </div>
+                <button onclick="calculateInterest()">Calculate</button>
+                <div id="result"></div>
+            </div>
+        
+            <script>
+                function calculateInterest() {
+                    var principal = parseFloat(document.getElementById('principal').value);
+                    var rate = parseFloat(document.getElementById('rate').value);
+                    var time = parseInt(document.getElementById('time').value);
+        
+                    var interest = (principal * rate * time) / 100;
+                    var totalAmount = principal + interest;
+        
+                    document.getElementById('result').innerHTML = "The total amount after " + time + " years will be: ₹" + totalAmount.toFixed(2);
+                }
+            </script>
+            </div>
+            <!--button type="submit">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value.trim();
+            var fatherName = document.getElementById('fatherName').value.trim();
+            var address = document.getElementById('address').value.trim();
+            var nominee = document.getElementById('nominee').value.trim();
+            var mobile = document.getElementById('mobile').value.trim();
+            var dob = document.getElementById('dob').value.trim();
+
+            if (name === "" || fatherName === "" || address === "" || nominee === "" || mobile === "" || dob === "") {
+                alert("Please fill in all mandatory fields marked with *.");
+                return false;
+            }
+
+            return true;
+        }
+    </script-->
+    <br>
+    <br>
+        <button type="button" onclick="submitLoan()">Submit</button>
+    </form>
+</div>
+
+    <script>
+        function submitLoan() {
+            // Assuming validation and file upload logic here
+    
+            // Simulating backend processing
+            setTimeout(function() {
+                // Generate random application number
+                var applicationNo = generateApplicationNumber();
+    
+                // Show popup with application number
+                alert("Your Fixed Deposit Application has been submitted successfully. Your Fixed Deposit Account Number: SBOZ/2024-25/Fixed Deposit Application/" + applicationNo);
+    
+                // Print PDF (simulate for demo)
+                printPDF(applicationNo);
+                        console.log("Printing PDF for Application Number: " + applicationNo);
+    
+            }, 2000); // Simulate backend processing delay
+        }
+    
+        function generateApplicationNumber() {
+            return Math.floor(Math.random() * 363902120008269); // Generate a random 16-digit number
+        }
+    
+        function printPDF(applicationNo) {
+            // Simulate printing PDF for demo
+            console.log("Printing PDF for Application Number: " + applicationNo);
+            // You can integrate a PDF generation library here for actual PDF generation
+        }
+    </script>
+    
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+
+        <div class="parent">
+            <div class="left">
+              <h3>SBONLINEZONE.IN</h3>
+              <span>/</span>
+              <p>© 2024 SAIDUR | All right reserved</p>
+            </div>
+            <div class="center">
+              <p>Home</p>
+              <span>/</span>
+              <p>Blog</p>
+              <span>/</span>
+              <p>Project</p>
+            </div>
+            <div class="right">
+              <i class="fa-brands fa-facebook"></i>
+              <i class="fa-brands fa-instagram"></i>
+              <i class="fa-brands fa-linkedin"></i>
+              <i class="fa-brands fa-github"></i>
+              <i class="fa-brands fa-whatsapp"></i>
+              <i class="fa-solid fa-phone-volume"></i>
+            </div>
+            
+            
+</body>
+</html>

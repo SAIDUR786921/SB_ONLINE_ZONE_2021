@@ -1,0 +1,369 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+  
+}
+body{
+height: auto;
+width:auto;
+}
+/*class{
+  width: 150px;
+  height: 100px;
+  position: relative;
+  display: block;
+  background: #660c0c;
+  border-radius: 200px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5), inset 0px -5px 15px rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+}*/
+
+class::after{
+  content: ;
+  width: 180px;
+  height: 180px;
+  position: absolute;
+  top: 10px;
+  left:10px
+  background:linear-gradient(#ffcc89, #d8860b);
+  border-radius: 180px;
+  box-sizing: 0px 5px 10px;
+
+}
+
+section{
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background: url(REGISTER.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+header{
+  position: relative;
+  top: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo{
+  position: relative;
+  color: red;
+  font-size: 35px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 1px;
+
+}
+
+header .navigation a{
+  color: rgb(255, 255, 255);
+  background: #010b01;
+
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 1px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: 0.3s;
+  transition-property: background;
+  
+}
+span {
+  font-size: 50px;
+}
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust top position as needed */
+  /*left: 100px; /* Adjust left position as needed */
+  right: 10px;
+  background-color: #080808;
+  padding: 2px;
+  border: 3px solid #56dd0e;
+  border-radius: 10px;
+  font-size: 30PX;
+}
+a{
+  color: rgb(239, 245, 245);
+  opacity: 0.5;
+
+  
+}
+a:hover {
+  opacity: 1.0;
+}
+a:link {
+  color: #ef0303;
+}
+
+
+a:visited {
+  color: #0bdaf6;
+}
+
+a:hover {
+  color: #91f505;
+}
+a:active {
+  color: #0000FF;
+}
+
+
+.menu {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu {
+  text-decoration: none;
+  color: #ff0404;
+}
+
+.close-button {
+ /* position: absolute;*/
+  top: -25px;
+  /*right: 20px;*/
+  cursor: pointer;
+  left: auto;
+  font-size: 40px;
+  
+
+}
+header .navigation a : :not(:last-child){
+  margin: right 30px;
+}
+
+header .navigation a :hover {
+ background: blue;
+}
+
+
+a{
+  color: rgb(0, 255, 255);
+  opacity: 0.5;
+
+  
+}
+a:hover {
+  opacity: 1.0;
+}
+a:link {
+  color: #ef0303;
+}
+
+
+a:visited {
+  color: #0bdaf6;
+}
+
+a:hover {
+  color: #91f505;
+}
+a:active {
+  color: #0000FF;
+}
+
+
+.menu {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu {
+  text-decoration: none;
+  color: #ff0404;
+}
+
+.close-button {
+ /* position: absolute;*/
+  top: -25px;
+  /*right: 20px;*/
+  cursor: pointer;
+  left: auto;
+  font-size: 40px;
+  
+
+}
+h1{
+  color: #ff002b;
+  
+}
+
+
+
+
+
+.baba form{
+
+    width: 650px;
+    height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 30px 22px 55px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    flex-wrap: wrap;
+
+}
+
+.baba form h1 {
+    color: rgb(250, 15, 132);
+    font-weight: 500;
+    margin-top: 20px;
+    width: 500px;
+    text-align: center;
+}
+.baba form h4{
+    color: #fff;
+    
+}
+
+.baba form input {
+    width: 295px;
+    height: 45px;
+    padding-left: 10px;
+    align-items: center;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    background: none;
+    border-bottom: 3px solid #fff;
+}
+
+.baba form input::placeholder{
+    color: #f31b1b;
+    text-align: center;
+
+}
+
+.baba form #lastName,
+.baba form #mobileNomber,{
+    margin-left:20px;
+
+}
+.baba form f4{
+    color: white;
+    font-weight: 300;
+    width: 600px;
+    margin-top: 10px;
+
+}
+.baba form textarea{
+    background: none;
+    border: none;
+    border-bottom: 3px solid #fff;
+    color: #fff;
+    font-weight: 250;
+    font-size: 15px;
+    padding: 10PX ;
+    outline: none;
+    min-width: 600PX;
+    max-height: 600px;
+    min-height: 80px;
+    
+
+}
+
+textarea::~ ::-webkit-scrollbar{
+    width: 2em;
+}
+textarea::~ ::-webkit-scrollbar-thumb{
+    background-color: rgba(255, 238, 0, 0.714);
+}
+
+.baba form #button{
+    border: none;
+    background: rgb(155, 23, 23);
+    border-radius: 10px;
+    margin-top: 30px;
+    font-weight: 700;
+    font-size: 25px;
+    /*color: rgb(255, 255, 255);*/
+    width: 210px;
+    padding: 0;
+    margin-right: 500px;
+    margin-bottom: 30px;
+    transition: 0.3s;
+    align-items: center;
+
+}
+
+.baba form #button :hover{
+    opacity: 0.7; 
+}
+
+
+.parent {
+  position: absolute;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  background-color: #234ce0;
+  display: flex;
+  color: white;
+  padding: 0 150px;
+}
+
+.left,
+.center,
+.right {
+  width: 33.33%;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left h3 {
+  font-size: 25px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+}
+
+.center p {
+  font-size: 17px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+}
+
+.right i {
+  font-size: 25px;
+}
+
+span {
+  font-size: 50px;
+}

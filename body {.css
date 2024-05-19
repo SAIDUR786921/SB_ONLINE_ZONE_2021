@@ -1,0 +1,240 @@
+body {
+  font-family: Arial, sans-serif;
+  transition: background-color 0.5s ease;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.container {
+  max-width: 300px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+section{
+   position: relative;
+   /* width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;*/
+    background: url(REGISTER.jpg)no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  header{
+    position: relative;
+    top: 0;
+    /*width: 100%;
+    padding: 30px 100px;*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .logo{
+    position: relative;
+    color: red;
+    font-size: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+  
+  }
+  
+  header .navigation a{
+    color: rgb(255, 255, 255);
+    background: #010b01;
+  
+    text-decoration: none;
+    font-weight: 500;
+    letter-spacing: 1px;
+    padding: 5px 20px;
+    border-radius: 20px;
+    transition: 0.3s;
+    transition-property: background;
+    
+  }
+  span {
+    font-size: 50px;
+  }
+  .menu {
+    display: none;
+    position: absolute;
+    top: 50px; /* Adjust top position as needed */
+    /*left: 100px; /* Adjust left position as needed */
+    right: 10px;
+    background-color: #080808;
+    padding: 2px;
+    border: 3px solid #56dd0e;
+    border-radius: 10px;
+    font-size: 30PX;
+  }
+  a{
+    color: rgb(239, 245, 245);
+    opacity: 0.5;
+  
+    
+  }
+  a:hover {
+    opacity: 1.0;
+  }
+  a:link {
+    color: #ef0303;
+  }
+  
+  
+  a:visited {
+    color: #0bdaf6;
+  }
+  
+  a:hover {
+    color: #91f505;
+  }
+  a:active {
+    color: #0000FF;
+  }
+  
+  
+  .menu {
+    list-style-type: none;
+    padding: 10px;
+  }
+  
+  .menu {
+    margin-bottom: 20px;
+  }
+  
+  .menu {
+    text-decoration: none;
+    color: #ff0404;
+  }
+  
+  .close-button {
+   /* position: absolute;*/
+    top: -25px;
+    /*right: 20px;*/
+    cursor: pointer;
+    left: auto;
+    font-size: 40px;
+    
+  
+  }
+
+
+  
+  header .navigation a :hover {
+   background: rgb(200, 200, 208);
+  }
+  
+  
+  
+
+h1 {
+  text-align: center;
+}
+
+label,
+input,
+button {
+  display: block;
+  margin-bottom: 10px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#result {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.parent {
+  position: absolute;
+  bottom: 0;
+  /*height: 100px;*/
+  width: 100%;
+  background-color: #141827;
+  display: flex;
+  color: white;
+  padding: 0 150px;
+}
+
+.left,
+.center,
+.right {
+  width: 33.33%;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.left h3 {
+  font-size: 25px;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding-left: 180px;
+}
+
+.center p {
+  font-size: 17px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 20px;
+  color: #f8f6f6;
+}
+
+.right i {
+  font-size: 25px;
+  color: aliceblue;
+}
+
+span {
+  font-size: 50px;
+}
+
+

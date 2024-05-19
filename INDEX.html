@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu and Close</title>
+<link rel="stylesheet" href="loan.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome CSS -->
+<!---->
+<!--style>
+.menu {
+  display: none;
+  position: absolute;
+  top: 50px; /* Adjust top position as needed */
+  left: 20px; /* Adjust left position as needed */
+  background-color: #f8f6f6;
+  padding: 2px;
+  border: 3px solid #56dd0e;
+  border-radius: 10px;
+  font-size: 30PX;
+}
+a{
+  color: rgb(0, 255, 255);
+  opacity: 0.5;
+
+  
+}
+a:hover {
+  opacity: 1.0;
+}
+a:link {
+  color: #ef0303;
+}
+
+
+a:visited {
+  color: #0bdaf6;
+}
+
+a:hover {
+  color: #91f505;
+}
+a:active {
+  color: #0000FF;
+}
+
+
+.menu {
+  list-style-type: none;
+  padding: 10px;
+}
+
+.menu {
+  margin-bottom: 20px;
+}
+
+.menu {
+  text-decoration: none;
+  color: #ff0404;
+}
+
+.close-button {
+ /* position: absolute;*/
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  
+
+}
+
+</style-->
+</head>
+<body>
+  
+  <section>
+    
+    <header>  
+                <h1> <p href="#" class="logo"><img src="LOGO.jpg" width="200" height="150"></p></h1>
+       
+
+
+<button onclick="toggleMenu()"><i class="fas fa-bars"></i></button> <!-- Font Awesome icon -->
+
+<div class="menu" id="menu">
+  <span class="close-button" onclick="toggleMenu()">X</span>
+
+
+
+    <!--a href="INDEX1.HTML">Home</a-->
+    <a href="About.html">About</a>
+    <a href="Contact.html">Contact</a>
+    <a href="login.html">Login</a>
+    <a href="registar.html">Register</a>
+    <a href="SETY.html">Service</a>   
+    </div>
+          
+
+</div>
+    </header>
+
+<script>
+function toggleMenu() {
+  var menu = document.getElementById('menu');
+  if (menu.style.display === 'none' || menu.style.display === '') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
+}
+</script>
+</header>
+<div class="content">
+    <div class="info">
+        <!--h2>WELCOME </h2-->
+      
+        <h2>SB Online Zone <br></h2>
+          <script>
+            const existingName = localStorage.getItem("name");
+        
+            if (existingName === null) {
+              const name = prompt("What is your name?");
+              localStorage.setItem("name", name);
+            } else {
+              document.write(`<h2>Welcome, ${existingName}</h2>`);
+            }
+          </script>
+          <h2>
+   <span> Join our team and get help with online solution & Loan Parposs </span></h2>
+        
+        
+        
+            <div class="wrapper">
+
+                <div class="text-box">
+                    <img src="oio.avif"> <br>
+                    <br>
+            
+            <P>Hi there Customer,<br>
+                ২০২১ পৰা আমি অনলাইন কামত জৰিত আৰু কমেও ২০ হাজাৰ মানুহ আমাৰ লগত জৰিত আৰু আমাৰ উপৰত বিশ্বাস ৰাখে।
+                 আমি সদায় অনলাইন যিকোনো Loan & Online Govt. Service & Job notification সকলোৰে আগত আমাৰ Customar জনাও।
+                  গতিকে আমাৰ লগত যোগ দিয়ক আৰু 
+                 আমাৰ social media ফলো কৰক।
+                আমাৰ টিম যইন কৰক আৰু অনলাইন ফ্ৰম ফিল আপ কৰি সকলো সুবিধা লাভ লক
+                <br>
+              
+                <h5>
+                New Updet 2024<BR>
+                  Absolutely, here's a customer-focused paragraph for a credit card loan advertisement:
+
+"At SB ONLINE ZONE, we understand that life can bring unexpected expenses or exciting opportunities. 
+That's why we offer our valued customers a hassle-free solution with our credit card loan.
+ With quick approval processes and personalized repayment plans, we're here to support you in achieving your financial goals, 
+ whether it's consolidating debt, covering emergency costs, or pursuing your dreams. 
+ Enjoy the convenience and peace of mind knowing that you have access to flexible credit when you need it most.
+  Apply today and experience the ease of managing your finances with SB ONLINE ZONE."</h5>
+  <h1>Thank You for visit Our Web<br>
+  CEO Of SB ONLINE Zone<br>
+Saidur Rahman</h1>
+<br>
+<br>
+
+                </p>
+            <a href="#" class="info-btn">More Info</a>
+                </div>
+            </div>
+    
+
+    
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="parent">
+<div class="left">
+  <h3>SBONLINEZONE.IN</h3>
+  <span>/</span>
+  <p>© 2024 SAIDUR | All right reserved</p>
+</div>
+<div class="center">
+  <p>Home</p>
+  <span>/</span>
+  <p>Blog</p>
+  <span>/</span>
+  <p>Project</p>
+</div>
+<div class="right">
+  <i class="fa-brands fa-facebook"></i>
+  <i class="fa-brands fa-instagram"></i>
+  <i class="fa-brands fa-linkedin"></i>
+  <i class="fa-brands fa-github"></i>
+  <i class="fa-brands fa-whatsapp"></i>
+  <i class="fa-solid fa-phone-volume"></i>
+</div>
+</section>
+
+
+
+</body>
+
+
+</body>
+</html>
